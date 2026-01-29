@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>無料トライアル登録 | TeraboX CRM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f8fafc; }
+        .form-card { background: #ffffff; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); border-radius: 1.5rem; }
+        .input-group:focus-within { border-color: #2563eb; ring: 2px; ring-color: #dbeafe; }
+        .social-button { transition: all 0.2s; border: 1px solid #e2e8f0; }
+        .social-button:hover { background-color: #f1f5f9; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center py-12 px-4">
+
+    <div class="text-center mb-8">
+        <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg mx-auto mb-4">
+            <span class="text-white font-bold text-3xl">T</span>
+        </div>
+        <h1 class="text-2xl font-black text-slate-800 tracking-tighter mb-1">TeraboX CRM</h1>
+        <p class="text-sm text-slate-500 font-medium">営業の即戦力となる次世代パッケージ</p>
+    </div>
+
+    <div class="form-card w-full max-w-[480px] p-8 md:p-10">
+        <h2 class="text-xl font-bold text-center text-slate-800 mb-2">無料トライアル登録</h2>
+        <p class="text-sm text-slate-500 text-center mb-8">14日間すべての機能をお試しいただけます</p>
+        <div class="flex bg-slate-100 p-1 rounded-xl mb-8" role="tablist" aria-label="アカウントタイプ選択">
+            <button type="button" id="acctCorp" class="flex-1 py-2 text-sm font-bold bg-white text-slate-800 rounded-lg shadow-sm" data-value="法人・チーム">
+                <i class="fas fa-building mr-2 text-blue-600"></i>法人・チーム
+            </button>
+            <button type="button" id="acctSolo" class="flex-1 py-2 text-sm font-bold text-slate-500 hover:text-slate-700" data-value="個人事業主">
+                <i class="fas fa-user mr-2"></i>個人事業主
+            </button>
+        </div>
+
+        <form id="freeTryForm" class="space-y-5">
+            <input type="hidden" name="accountType" id="accountType" value="法人・チーム">
+            <div>
+                <label class="block text-xs font-bold text-slate-700 mb-2">氏名</label>
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400">
+                        <i class="far fa-user text-sm"></i>
+                    </span>
+                    <input name="name" type="text" placeholder="山田 太郎" class="w-full pl-11 pr-4 py-3 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-600 transition">
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold text-slate-700 mb-2">メールアドレス</label>
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400">
+                        <i class="far fa-envelope text-sm"></i>
+                    </span>
+                    <input name="email" type="email" placeholder="example@terabox.co.jp" class="w-full pl-11 pr-4 py-3 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-600 transition">
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold text-slate-700 mb-2">パスワード（入力不要：メールで担当が設定します）</label>
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400">
+                        <i class="fas fa-lock text-sm"></i>
+                    </span>
+                    <input name="password" type="password" placeholder="（省略可能）" class="w-full pl-11 pr-4 py-3 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-600 transition">
+                </div>
+                <p class="text-[10px] text-slate-400 mt-2 ml-1">（注）パスワードはメールで送信しない運用を推奨します。ここは任意入力です。</p>
+            </div>
+
+            <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-xl font-bold text-sm hover:bg-blue-700 shadow-lg shadow-blue-100 transition-all active:scale-[0.98] mt-4">
+                アカウントを作成
+            </button>
+            <div id="freeMessage" class="mt-4 hidden p-4 rounded-md"></div>
+
+            <p class="text-xs text-slate-500 mt-3">当社はお預かりする個人情報（氏名、メールアドレス等）を、無料トライアルの案内およびアカウント管理のために利用します。個人情報の取扱い、保存期間、第三者提供およびお客様の権利（閲覧・訂正・削除の請求方法）についての詳細は、下記のプライバシーポリシーをご確認ください。<a href="privacy-ja.html" class="text-blue-600 hover:underline">プライバシーとデータの取り扱いについて</a></p>
+        </form>
+
+        <div class="relative my-8">
+            <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-100"></div></div>
+            <div class="relative flex justify-center text-xs"><span class="bg-white px-4 text-slate-400">または</span></div>
+        </div>
+
+        <!-- social buttons will be rendered here by JS component for reuse -->
+        <div id="social-buttons" class="space-y-3"></div>
+
+        <p class="text-xs text-center text-slate-500 mt-8">
+            すでにアカウントをお持ちの方は <a href="#" class="text-blue-600 font-bold hover:underline">ログイン</a> | <a href="Terabox CRM.html" class="text-blue-600 font-bold hover:underline">ホームに戻る</a>
+        </p>
+    </div>
+
+    <footer class="mt-12 text-center">
+        <p class="text-[10px] text-slate-400 tracking-widest uppercase">
+            © 2026 TeraboX Inc. All rights reserved.
+        </p>
+    </footer>
+
+    <script>
+        (function(){
+            // Use local asset SVGs for icons (keeps markup small and caches easily)
+            const icons = {
+                microsoft: '<img src="assets/microsoft.svg" class="w-4 h-4 mr-3" alt="Microsoft" loading="lazy">',
+                google: '<img src="assets/google.svg" class="w-4 h-4 mr-3" alt="Google" loading="lazy">'
+            };
+
+            const buttons = [
+                {id: 'microsoft', label: 'Microsoft アカウントで続行', svg: icons.microsoft, href: '#'},
+                {id: 'google', label: 'Google アカウントで続行', svg: icons.google, href: '#'}
+            ];
+
+            const container = document.getElementById('social-buttons');
+            if(!container) return;
+
+            container.innerHTML = buttons.map(b => `\
+                <button type="button" class="social-button w-full flex items-center justify-center py-3 rounded-xl bg-white text-sm font-medium text-slate-700" aria-label="${b.label}" data-provider="${b.id}">\
+                    ${b.svg}\
+                    <span>${b.label}</span>\
+                </button>\
+            `).join('');
+
+            // Optional: attach click handlers for future OAuth integration
+            container.addEventListener('click', function(e){
+                const btn = e.target.closest('button[data-provider]');
+                if(!btn) return;
+                const provider = btn.getAttribute('data-provider');
+                // Placeholder action — replace with real OAuth redirect when available
+                if(provider === 'microsoft'){
+                    window.location.href = '#';
+                } else if(provider === 'google'){
+                    window.location.href = '#';
+                }
+            });
+        })();
+    </script>
+
+    <script>
+    (function(){
+        // account toggle
+        const acctCorp = document.getElementById('acctCorp');
+        const acctSolo = document.getElementById('acctSolo');
+        const accountTypeInput = document.getElementById('accountType');
+        function setActive(btn){
+            acctCorp.classList.remove('bg-white','text-slate-800'); acctCorp.classList.add('text-slate-500');
+            acctSolo.classList.remove('bg-white','text-slate-800'); acctSolo.classList.add('text-slate-500');
+            btn.classList.add('bg-white','text-slate-800'); btn.classList.remove('text-slate-500');
+            accountTypeInput.value = btn.getAttribute('data-value');
+        }
+        acctCorp.addEventListener('click', () => setActive(acctCorp));
+        acctSolo.addEventListener('click', () => setActive(acctSolo));
+
+        // form submit -> mailto
+        const form = document.getElementById('freeTryForm');
+        const msg = document.getElementById('freeMessage');
+        const SUPPORT_EMAIL = 'sales@terabox.jp';
+        function showMessage(txt, ok){
+            msg.className = 'mt-4 p-4 rounded-md'; msg.textContent = txt;
+            if(ok){ msg.classList.add('bg-green-50','text-green-800','border','border-green-200'); msg.classList.remove('hidden'); }
+            else { msg.classList.add('bg-red-50','text-red-800','border','border-red-200'); msg.classList.remove('hidden'); }
+        }
+
+        form.addEventListener('submit', function(ev){
+            ev.preventDefault();
+            msg.classList.add('hidden');
+            const fd = new FormData(form);
+            const name = fd.get('name')||'';
+            const email = fd.get('email')||'';
+            const acct = fd.get('accountType')||'';
+            if(!name.trim() || !email.trim()){ showMessage('氏名とメールは必須です', false); return; }
+            const subject = encodeURIComponent('【無料トライアル登録】 ' + name);
+            const lines = [];
+            lines.push('ページ: 無料トライアル登録');
+            lines.push('日時: ' + new Date().toLocaleString());
+            lines.push('お名前: ' + name);
+            lines.push('メール: ' + email);
+            lines.push('アカウント種別: ' + acct);
+            lines.push('\n----\n※ このメールは自動生成されています。必要に応じてファイルを添付して送信してください。');
+            const body = encodeURIComponent(lines.join('\n'));
+            window.location.href = `mailto:${SUPPORT_EMAIL}?subject=${subject}&body=${body}`;
+            showMessage('メールクライアントが開きます。必要に応じて添付ファイルを手動で追加して送信してください。', true);
+        });
+    })();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>補助金相談 - Terabox</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+      body { font-family: 'Noto Sans JP', sans-serif; background-color: #f8fafc; }
+      .form-card { background: #ffffff; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); border-radius: 1.5rem; }
+  .input-group:focus-within { border-color: #2563eb; }
+      .social-button { transition: all 0.2s; border: 1px solid #e2e8f0; }
+      .social-button:hover { background-color: #f1f5f9; }
+      /* support option styling */
+      .support-list .support-item{ display:flex; align-items:flex-start; gap:0.75rem; }
+      .support-list .support-item .support-label{ display:block; line-height:1.45; color:#0f172a; }
+      .support-list .support-item input[type="checkbox"]{ margin-top:0.25rem; }
+      /* file input nicer spacing */
+      .file-input{ margin-top:0.5rem; }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col items-center py-12 px-4">
+
+    <div class="text-center mb-8">
+      <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg mx-auto mb-4">
+        <span class="text-white font-bold text-3xl">T</span>
+      </div>
+      <h1 class="text-2xl font-black text-slate-800 tracking-tighter mb-1">TeraboX CRM</h1>
+  <p class="text-sm text-slate-500 font-medium">補助金相談のご相談フォーム</p>
+    </div>
+
+    <div class="form-card w-full max-w-[640px] p-8 md:p-10">
+  <h2 class="text-xl font-bold text-center text-slate-800 mb-2">補助金相談フォーム</h2>
+  <p class="text-sm text-slate-500 text-center mb-6">IT導入補助金に関する導入支援・申請サポートのご相談はこちらから。必須項目をご入力のうえ送信ください。</p>
+
+      <form id="subsidyForm" novalidate>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700">会社名（法人名） <span class="text-red-600">*</span></label>
+              <input name="company" required class="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700">部署</label>
+              <input name="department" class="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700">担当者名 <span class="text-red-600">*</span></label>
+              <input name="contact" required class="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700">役職</label>
+              <input name="position" class="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700">電話番号 <span class="text-red-600">*</span></label>
+              <input name="phone" required type="tel" class="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700">メールアドレス <span class="text-red-600">*</span></label>
+              <input name="email" required type="email" class="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium text-gray-700">住所</label>
+              <input name="address" class="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700">業種</label>
+              <input name="industry" class="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700">従業員数</label>
+              <select name="employees" class="mt-1 block w-full border border-gray-300 rounded-md p-2">
+                <option value="">選択してください</option>
+                <option>1-9</option>
+                <option>10-49</option>
+                <option>50-99</option>
+                <option>100-499</option>
+                <option>500+</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700">年商（概算）</label>
+              <input name="revenue" class="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium text-gray-700">現在利用中のシステム・課題（簡潔に）</label>
+              <textarea name="currentSystems" rows="3" class="mt-1 block w-full border border-gray-300 rounded-md p-2"></textarea>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700">導入希望時期</label>
+              <input name="desiredDate" type="month" class="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700">この案件は補助金の対象を想定していますか？</label>
+              <div class="mt-1 flex items-center space-x-4">
+                <label class="inline-flex items-center"><input type="radio" name="isSubsidy" value="yes" class="form-radio"/> はい</label>
+                <label class="inline-flex items-center"><input type="radio" name="isSubsidy" value="no" class="form-radio"/> いいえ</label>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700">希望補助金額（概算）</label>
+              <input name="subsidyAmount" class="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium text-gray-700">希望するサポート</label>
+              <div class="mt-2 space-y-2 support-list">
+                <label class="support-item"><input type="checkbox" name="support" value="申請支援" class="form-checkbox"/><span class="support-label">申請支援</span></label>
+                <label class="support-item"><input type="checkbox" name="support" value="適用確認" class="form-checkbox"/><span class="support-label">補助金の適用可否確認</span></label>
+                <label class="support-item"><input type="checkbox" name="support" value="導入支援" class="form-checkbox"/><span class="support-label">導入支援</span></label>
+                <label class="support-item"><input type="checkbox" name="support" value="見積作成" class="form-checkbox"/><span class="support-label">見積作成</span></label>
+              </div>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium text-gray-700">添付ファイル（見積書／決算書等）</label>
+              <input type="file" name="attachments" multiple class="mt-1 file-input" />
+              <p class="text-xs text-gray-500 mt-1">※ファイルはメールにて別添ください。本フォームはファイルの参照のために添付を受け付けますが、メール送信時は自動添付されない場合があります。</p>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium text-gray-700">備考／相談内容</label>
+              <textarea name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md p-2"></textarea>
+            </div>
+
+            <div class="md:col-span-2 flex items-center">
+              <input id="consent" type="checkbox" class="form-checkbox mr-2" required />
+              <label for="consent" class="text-sm">個人情報の取扱いに同意します（* ご連絡・申請サポートのために利用します）</label>
+            </div>
+          </div>
+
+        <div class="mt-6 flex items-center justify-between">
+          <div class="text-sm text-gray-600">※ 必須項目を入力のうえ送信ください</div>
+          <div class="space-x-3">
+            <a href="Terabox CRM.html" class="text-sm text-blue-600 font-bold hover:underline">ホームに戻る</a>
+            <button type="submit" class="w-44 bg-blue-600 text-white py-3 rounded-xl font-bold text-sm hover:bg-blue-700 shadow-lg">送信（メールを開く）</button>
+          </div>
+        </div>
+  <p class="text-xs text-slate-500 mt-3">当フォームで取得する個人情報（会社名、担当者名、電話番号、メールアドレス等）は、補助金サポートおよび申請支援のために利用します。情報の保存期間、取り扱い責任者、お問い合わせ窓口、ユーザーの権利（閲覧・訂正・削除の方法）など詳細はプライバシーポリシーでご確認ください：<a href="privacy-ja.html" class="text-blue-600 hover:underline">プライバシーとデータの取り扱いについて</a></p>
+      </form>
+
+      <div id="formMessage" class="mt-4 hidden p-4 rounded-md"></div>
+    </div>
+
+    <footer class="mt-12 text-center">
+      <p class="text-[10px] text-slate-400 tracking-widest uppercase">© 2026 TeraboX Inc. All rights reserved.</p>
+    </footer>
+
+    <script>
+      (function(){
+        const form = document.getElementById('subsidyForm');
+        const messageBox = document.getElementById('formMessage');
+  // unified support email
+  const SUPPORT_EMAIL = 'sales@terabox.jp';
+
+        function showMessage(txt, ok){
+          messageBox.className = 'mt-4 p-4 rounded-md';
+          messageBox.textContent = txt;
+          if(ok){
+            messageBox.classList.add('bg-green-50','text-green-800','border','border-green-200');
+            messageBox.classList.remove('hidden');
+          } else {
+            messageBox.classList.add('bg-red-50','text-red-800','border','border-red-200');
+            messageBox.classList.remove('hidden');
+          }
+        }
+
+        function collectFormData(formEl){
+          const fd = new FormData(formEl);
+          // collect support checkboxes
+          const supports = [];
+          for (const v of fd.getAll('support')) supports.push(v);
+          const obj = {
+            company: fd.get('company')||'',
+            department: fd.get('department')||'',
+            contact: fd.get('contact')||'',
+            position: fd.get('position')||'',
+            phone: fd.get('phone')||'',
+            email: fd.get('email')||'',
+            address: fd.get('address')||'',
+            industry: fd.get('industry')||'',
+            employees: fd.get('employees')||'',
+            revenue: fd.get('revenue')||'',
+            currentSystems: fd.get('currentSystems')||'',
+            desiredDate: fd.get('desiredDate')||'',
+            isSubsidy: fd.get('isSubsidy')||'',
+            subsidyAmount: fd.get('subsidyAmount')||'',
+            support: supports.join(', '),
+            message: fd.get('message')||''
+          };
+          return obj;
+        }
+
+        function validate(obj){
+          const errors = [];
+          if(!obj.company.trim()) errors.push('会社名は必須です');
+          if(!obj.contact.trim()) errors.push('担当者名は必須です');
+          if(!obj.email.trim()) errors.push('メールアドレスは必須です');
+          if(!obj.phone.trim()) errors.push('電話番号は必須です');
+          return errors;
+        }
+
+        function buildMailto(obj){
+          const subject = encodeURIComponent('【補助金相談】 ' + (obj.company || '[会社名未記入]'));
+          const lines = [];
+          lines.push('ページ: 補助金相談フォーム');
+          lines.push('日時: ' + new Date().toLocaleString());
+          lines.push('会社名: ' + (obj.company||''));
+          lines.push('部署: ' + (obj.department||''));
+          lines.push('担当者名: ' + (obj.contact||''));
+          lines.push('役職: ' + (obj.position||''));
+          lines.push('電話番号: ' + (obj.phone||''));
+          lines.push('メールアドレス: ' + (obj.email||''));
+          lines.push('住所: ' + (obj.address||''));
+          lines.push('業種: ' + (obj.industry||''));
+          lines.push('従業員数: ' + (obj.employees||''));
+          lines.push('年商: ' + (obj.revenue||''));
+          lines.push('現在利用中のシステム・課題: ' + (obj.currentSystems||''));
+          lines.push('導入希望時期: ' + (obj.desiredDate||''));
+          lines.push('補助金対象: ' + (obj.isSubsidy||''));
+          lines.push('希望補助金額: ' + (obj.subsidyAmount||''));
+          lines.push('希望するサポート: ' + (obj.support||''));
+          lines.push('備考: ' + (obj.message||''));
+          lines.push('\n----\n※ 添付ファイルはメールにて別添ください（本フォームは自動添付されない場合があります）。');
+          const body = encodeURIComponent(lines.join('\n'));
+          return `mailto:${SUPPORT_EMAIL}?subject=${subject}&body=${body}`;
+        }
+
+        form.addEventListener('submit', function(ev){
+          ev.preventDefault();
+          messageBox.classList.add('hidden');
+          const data = collectFormData(form);
+          const errors = validate(data);
+          const consent = document.getElementById('consent').checked;
+          if(!consent){
+            errors.push('個人情報の取扱いへの同意が必要です');
+          }
+          if(errors.length){
+            showMessage(errors.join('\n'), false);
+            return;
+          }
+
+          // Build mailto and open user's email client
+          const mailto = buildMailto(data);
+          // open mail client in new window
+          window.location.href = mailto;
+          showMessage('メールクライアントが開きます。必要に応じて添付ファイルを手動で追加して送信してください。', true);
+          // optional: store a copy locally
+          try{ localStorage.setItem('lastSubsidyRequest', JSON.stringify(data)); }catch(e){}
+        });
+      })();
+    </script>
+    <script>
+      // Prevent single-character orphan lines for support labels
+      (function(){
+        try{
+          document.querySelectorAll('.support-label').forEach(el => {
+            const txt = el.textContent.trim();
+            if(!txt) return;
+            // If label contains spaces, replace the last regular space with a non-breaking space
+            if(/\s/.test(txt)){
+              el.textContent = txt.replace(/\s+([^\s]+)$/, '\u00A0$1');
+            } else if(txt.length > 1){
+              // For CJK strings without spaces, insert NBSP before last character to avoid single-char wrap
+              el.textContent = txt.slice(0, -1) + '\u00A0' + txt.slice(-1);
+            }
+          });
+        }catch(e){ /* noop */ }
+      })();
+    </script>
+  </body>
+</html>

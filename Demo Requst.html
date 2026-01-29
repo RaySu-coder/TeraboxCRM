@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>無料デモ予約 | TeraboX CRM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f8fafc; }
+        .form-card { background: #ffffff; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04); border-radius: 2rem; }
+        .input-field { transition: all 0.2s; border: 1px solid #e2e8f0; }
+        .input-field:focus { border-color: #2563eb; ring: 2px; ring-color: #dbeafe; outline: none; }
+        .checkbox-custom:checked { background-color: #2563eb; border-color: #2563eb; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center py-16 px-4">
+
+    <div class="text-center mb-10">
+        <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg mx-auto mb-6">
+            <span class="text-white font-bold text-3xl">T</span>
+        </div>
+        <h1 class="text-2xl font-black text-slate-800 tracking-tighter mb-2">無料デモの予約</h1>
+        <p class="text-sm text-slate-500 max-w-sm mx-auto">
+            貴社の業務フローに合わせた最適な活用方法を、専門のコンサルタントが実画面でご提案します。
+        </p>
+    </div>
+
+    <div class="form-card w-full max-w-[600px] p-8 md:p-12">
+        <form id="demoForm" class="space-y-8">
+            
+            <div class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-2">会社名</label>
+                        <input name="company" type="text" placeholder="株式会社テラボックス" class="input-field w-full px-4 py-3 rounded-xl text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-2">お名前</label>
+                        <input name="contact" type="text" placeholder="山田 太郎" class="input-field w-full px-4 py-3 rounded-xl text-sm">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-2">メールアドレス</label>
+                    <input name="email" type="email" placeholder="name@company.co.jp" class="input-field w-full px-4 py-3 rounded-xl text-sm">
+                </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-50">
+                <label class="block text-xs font-bold text-slate-700 mb-4">特に詳しく聞きたい内容（複数選択可）</label>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <label class="flex items-center space-x-3 p-3 border border-slate-100 rounded-xl cursor-pointer hover:bg-slate-50 transition">
+                        <input name="topics" type="checkbox" value="補助金の活用" class="checkbox-custom w-4 h-4 rounded border-slate-300 text-blue-600">
+                        <span class="text-xs text-slate-600">補助金の活用</span>
+                    </label>
+                    <label class="flex items-center space-x-3 p-3 border border-slate-100 rounded-xl cursor-pointer hover:bg-slate-50 transition">
+                        <input name="topics" type="checkbox" value="Excelからのデータ移行" class="checkbox-custom w-4 h-4 rounded border-slate-300 text-blue-600">
+                        <span class="text-xs text-slate-600">Excelからのデータ移行</span>
+                    </label>
+                    <label class="flex items-center space-x-3 p-3 border border-slate-100 rounded-xl cursor-pointer hover:bg-slate-50 transition">
+                        <input name="topics" type="checkbox" value="Teams / SSO連携" class="checkbox-custom w-4 h-4 rounded border-slate-300 text-blue-600">
+                        <span class="text-xs text-slate-600">Teams / SSO連携</span>
+                    </label>
+                    <label class="flex items-center space-x-3 p-3 border border-slate-100 rounded-xl cursor-pointer hover:bg-slate-50 transition">
+                        <input name="topics" type="checkbox" value="AIによる売上予測" class="checkbox-custom w-4 h-4 rounded border-slate-300 text-blue-600">
+                        <span class="text-xs text-slate-600">AIによる売上予測</span>
+                    </label>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold text-slate-700 mb-2">備考・ご質問</label>
+                <textarea name="notes" rows="4" placeholder="現在の課題や、デモの希望日時がございましたら入力してください。" class="input-field w-full px-4 py-3 rounded-xl text-sm"></textarea>
+            </div>
+
+            <div class="text-center pt-4">
+                <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-xl font-bold text-sm hover:bg-blue-700 shadow-xl shadow-blue-100 transition-all active:scale-[0.98]">
+                    デモの予約を確定する
+                </button>
+                <p class="mt-6 text-[10px] text-slate-400">
+                    ご送信いただいた情報は、当社のプライバシーポリシーに基づき厳重に管理されます。 | <a href="Terabox CRM.html" class="text-blue-600 font-bold hover:underline">ホームに戻る</a>
+                </p>
+                <p class="text-xs text-slate-500 mt-3">このフォームで収集する個人情報（会社名、担当者名、メールアドレス等）は、デモ実施の調整とご連絡の目的で利用します。詳細な取り扱い方針、保存期間、第三者提供の有無、ならびにユーザーの権利についてはプライバシーポリシーをご覧ください：<a href="privacy-ja.html" class="text-blue-600 hover:underline">プライバシーとデータの取り扱いについて</a></p>
+            </div>
+        </form>
+    </div>
+
+    <div id="demoMessage" class="max-w-[600px] w-full mx-auto mt-4 hidden p-4 rounded-md"></div>
+
+    <script>
+    (function(){
+        const form = document.getElementById('demoForm');
+        const messageBox = document.getElementById('demoMessage');
+        const SUPPORT_EMAIL = 'sales@terabox.jp';
+
+        function showMessage(txt, ok){
+            messageBox.className = 'max-w-[600px] w-full mx-auto mt-4 p-4 rounded-md';
+            messageBox.textContent = txt;
+            if(ok){ messageBox.classList.add('bg-green-50','text-green-800','border','border-green-200'); messageBox.classList.remove('hidden'); }
+            else { messageBox.classList.add('bg-red-50','text-red-800','border','border-red-200'); messageBox.classList.remove('hidden'); }
+        }
+
+        form.addEventListener('submit', function(ev){
+            ev.preventDefault();
+            messageBox.classList.add('hidden');
+            const fd = new FormData(form);
+            const topics = fd.getAll('topics');
+            const data = {
+                company: fd.get('company')||'',
+                contact: fd.get('contact')||'',
+                email: fd.get('email')||'',
+                topics: topics.join(', '),
+                notes: fd.get('notes')||''
+            };
+            const errors = [];
+            if(!data.contact.trim()) errors.push('お名前は必須です');
+            if(!data.email.trim()) errors.push('メールアドレスは必須です');
+            if(errors.length){ showMessage(errors.join('\n'), false); return; }
+
+            const subject = encodeURIComponent('【デモ予約】 ' + (data.company || data.contact));
+            const lines = [];
+            lines.push('ページ: デモ予約');
+            lines.push('日時: ' + new Date().toLocaleString());
+            lines.push('会社名: ' + data.company);
+            lines.push('担当者名: ' + data.contact);
+            lines.push('メールアドレス: ' + data.email);
+            lines.push('ご希望内容: ' + data.topics);
+            lines.push('備考: ' + data.notes);
+            lines.push('\n----\n※ このメールは自動生成されています。必要に応じてファイルを添付して送信してください。');
+            const body = encodeURIComponent(lines.join('\n'));
+            window.location.href = `mailto:${SUPPORT_EMAIL}?subject=${subject}&body=${body}`;
+            showMessage('メールクライアントが開きます。必要に応じて添付ファイルを手動で追加して送信してください。', true);
+        });
+    })();
+    </script>
+
+    <footer class="mt-16 text-center">
+        <div class="flex justify-center items-center space-x-2 mb-4 grayscale opacity-50">
+            <div class="w-6 h-6 bg-blue-600 rounded flex items-center justify-center">
+                <span class="text-white font-bold text-[10px]">T</span>
+            </div>
+            <span class="text-sm font-black text-slate-800 tracking-tighter">TeraboX CRM</span>
+        </div>
+        <p class="text-[10px] text-slate-400 tracking-widest uppercase">
+            © 2026 TeraboX Inc. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

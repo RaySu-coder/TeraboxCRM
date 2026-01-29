@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeraboX CRM 2026 | 営業から始める、企業の成長を支える专属パッケージ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+        body { font-family: 'Noto Sans JP', sans-serif; scroll-behavior: smooth; }
+        .hero-bg { background: radial-gradient(circle at top right, #f8fafc, #ffffff); }
+        .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .img-placeholder { background: #f1f5f9; border: 2px dashed #cbd5e1; display: flex; align-items: center; justify-content: center; flex-direction: column; color: #94a3b8; }
+        /* interactive card effect */
+        .interactive-card{ will-change: transform; transform-style: preserve-3d; transition: box-shadow .25s ease, transform .25s ease; }
+        .interactive-card:after{ content: ''; position: absolute; inset: 0; pointer-events: none; border-radius: inherit; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <header class="fixed w-full z-50 glass-card border-b border-slate-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-[#8cc63f] rounded-lg flex items-center justify-center shadow-md">
+                    <span class="text-white font-bold text-xl">T</span>
+                </div>
+                <span class="text-2xl font-black tracking-tight text-slate-800">TeraboX <span class="text-[#8cc63f]">CRM</span></span>
+            </div>
+            <div class="hidden lg:flex space-x-8 text-sm font-bold text-slate-600">
+                <a href="#transformation" class="hover:text-blue-600">Excelからの卒業</a>
+                <a href="#workflow" class="hover:text-blue-600">業務フロー</a>
+                <a href="#features" class="hover:text-blue-600">機能詳細</a>
+                <a href="#extension" class="hover:text-blue-600">拡張性・運用性</a>
+            </div>
+            <a href="Demo Requst.html" class="bg-blue-600 text-white px-6 py-2.5 rounded-full font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-100 inline-block text-center">無料デモ予約</a>
+        </div>
+    </header>
+
+    <section class="hero-bg pt-40 pb-24 border-b text-center lg:text-left">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <div class="inline-block px-3 py-1 mb-6 text-xs font-bold text-blue-600 bg-blue-100 rounded-full">2026年最新版：企業のDXを加速させる基盤ツール</div>
+                    <h1 class="text-4xl lg:text-6xl font-black leading-tight mb-8">
+                        まずは営業から。<br>企業の成長を加速させる<br><span class="text-blue-600">最強の基礎ツール。</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 mb-10 leading-relaxed max-w-xl">
+                        Excelの管理を「稼ぐ資産」へ。最も重要な営業活動の最適化からスタートし、柔軟なAPI連携で全社のDXを段階的に実現します。IT担当者不在の中小企業でも安心の、究極にシンプルな運用を。
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                        <a href="Free Try.html" class="bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold hover:bg-slate-800 transition shadow-xl inline-block text-center">今すぐ無料で試す</a>
+                        <a href="補助金相談.html" class="bg-white border border-slate-200 px-10 py-4 rounded-2xl font-bold hover:bg-slate-50 transition text-slate-600 inline-block text-center">補助金相談</a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 w-full">
+                    <div class="rounded-[2.5rem] aspect-video shadow-2xl relative bg-white p-4 border-none overflow-hidden">
+                        <img src="assets/Home.png" alt="営業ホーム画面" class="w-full h-full object-cover rounded-[2rem]">
+                    </div>
+                    <!-- social login buttons (local SVG logos) -->
+                    <!-- buttons + login illustration: responsive layout -> buttons left, image to the right on md+; ensure equal-height on md+ -->
+                    <div class="mt-6 flex flex-col md:flex-row items-center md:items-stretch gap-4">
+                        <div class="flex-1 w-full space-y-3 flex flex-col justify-center">
+                            <button type="button" class="w-full flex items-center justify-start gap-4 py-3 px-4 rounded-2xl bg-white text-sm font-medium text-slate-700 border border-slate-100 shadow-sm" aria-label="Microsoft アカウントで続行" data-provider="microsoft">
+                                <img src="assets/microsoft.svg" alt="Microsoft" class="w-6 h-6">
+                                <span class="font-semibold">Microsoft アカウントで続行</span>
+                            </button>
+                            <button type="button" class="w-full flex items-center justify-start gap-4 py-3 px-4 rounded-2xl bg-white text-sm font-medium text-slate-700 border border-slate-100 shadow-sm" aria-label="Google アカウントで続行" data-provider="google">
+                                <img src="assets/google.svg" alt="Google" class="w-6 h-6">
+                                <span class="font-semibold">Google アカウントで続行</span>
+                            </button>
+                        
+                            <!-- additional note: emphasize customer's own email address can be used -->
+                            <p class="mt-2 text-xs text-slate-500">Microsoft や Google のアカウントのほかに、お客様ご自身のメールアドレスでもアカウントを作成してログイン・管理できます。</p>
+                        </div>
+
+                        <!-- show illustration on medium+ screens to the right of buttons; image set to h-full to match buttons height -->
+                        <div class="hidden md:flex md:items-center md:justify-center md:pl-4">
+                            <img src="assets/Login.png" alt="ログインイメージ" class="h-full w-auto max-h-[220px] rounded-md shadow-sm object-contain">
+                        </div>
+                    </div>
+
+                    <!-- Login info modal (informational only, no OAuth) -->
+                    <div id="login-info-modal" class="fixed inset-0 hidden items-center justify-center bg-black/60 z-60" aria-hidden="true">
+                        <div class="bg-white rounded-lg max-w-lg w-[92%] p-6 shadow-2xl relative">
+                            <button id="login-info-close" class="absolute top-3 right-3 text-slate-600 hover:text-slate-900">&times;</button>
+                            <h3 class="text-lg font-bold mb-2">アカウントでの開始（操作イメージ）</h3>
+                            <p id="login-info-msg" class="text-sm text-slate-600 leading-relaxed">指定したアカウントで簡単に始められます。ここはデモ表示のため実際のログインは行われません。</p>
+                            <div class="mt-6 text-right">
+                                <button id="login-info-ok" class="px-4 py-2 bg-blue-600 text-white rounded-lg font-medium">閉じる</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="transformation" class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-black mb-16 underline decoration-blue-500 underline-offset-8 text-slate-800">Excelの「限界」を突破し、資産へ</h2>
+            <div class="grid md:grid-cols-2 gap-0 border rounded-[3rem] overflow-hidden shadow-2xl">
+                <div class="p-12 bg-slate-50 text-left border-r border-slate-200">
+                    <h4 class="text-xl font-bold mb-8 text-slate-400 uppercase tracking-widest">Conventional Management</h4>
+                    <ul class="space-y-6">
+                        <li class="flex items-start text-sm font-medium"><i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i> 属人化したExcelファイル。最新版が不明。</li>
+                        <li class="flex items-start text-sm font-medium"><i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i> 权限制定ができず、常に情報漏洩のリスク。</li>
+                        <li class="flex items-start text-sm font-medium"><i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i> 入力ミスが多く、正確な分析が不可能。</li>
+                    </ul>
+                </div>
+                <div class="p-12 bg-blue-600 text-white text-left">
+                    <h4 class="text-xl font-bold mb-8 italic uppercase tracking-widest text-blue-200">TeraboX Transformation</h4>
+                    <ul class="space-y-6">
+                        <li class="flex items-start text-sm font-medium"><i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i> クラウド一元管理。全ての営業情報を可視化。</li>
+                        <li class="flex items-start text-sm font-medium"><i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i> 多段階の权限制定で、大切な顧客データを守る。</li>
+                        <li class="flex items-start text-sm font-medium"><i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i> バリデーション機能で、データの質を常に高く。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workflow" class="py-24 bg-slate-50 border-y border-slate-200">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-black mb-4 text-slate-800">一気通貫の業務フロー</h2>
+            <p class="text-slate-500 mb-16 italic font-medium">営業ホームを起点に、すべての営業プロセスがシームレスに繋がります。</p>
+            <div class="flex flex-wrap lg:flex-nowrap items-center justify-center gap-4">
+                <div class="w-full lg:flex-1 p-6 bg-blue-50 rounded-2xl border-2 border-blue-100 shadow-sm flex items-center">
+                    <img src="assets/sales-data driven.png" alt="sale-data driven（営業ホーム）" class="w-12 h-12 object-cover rounded-md mr-4 cursor-pointer transition-transform hover:scale-105" loading="lazy" data-large="assets/sales-data driven.png">
+                    <div>
+                        <span class="text-[10px] font-black text-blue-600 block mb-1 uppercase">Start</span>
+                        <p class="font-bold text-sm">営業ホーム</p>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right text-slate-300 hidden lg:block"></i>
+                <div class="w-full lg:flex-1 p-6 bg-white rounded-2xl border border-slate-200 shadow-sm flex items-center">
+                    <img src="assets/Lead.png" alt="リード管理" class="w-12 h-12 object-cover rounded-md mr-4 cursor-pointer transition-transform hover:scale-105" loading="lazy" data-large="assets/Lead.png">
+                    <p class="font-bold text-sm">リード管理</p>
+                </div>
+                <i class="fas fa-chevron-right text-slate-300 hidden lg:block"></i>
+                <div class="w-full lg:flex-1 p-6 bg-white rounded-2xl border border-slate-200 shadow-sm flex items-center">
+                    <img src="assets/取引先.png" alt="取引先管理" class="w-12 h-12 object-cover rounded-md mr-4 cursor-pointer transition-transform hover:scale-105" loading="lazy" data-large="assets/取引先.png">
+                    <p class="font-bold text-sm">取引先管理</p>
+                </div>
+                <i class="fas fa-chevron-right text-slate-300 hidden lg:block"></i>
+                <div class="w-full lg:flex-1 p-6 bg-white rounded-2xl border border-slate-200 shadow-sm flex items-center">
+                    <img src="assets/案件.png" alt="商談管理" class="w-12 h-12 object-cover rounded-md mr-4 cursor-pointer transition-transform hover:scale-105" loading="lazy" data-large="assets/案件.png">
+                    <p class="font-bold text-sm">商談管理</p>
+                </div>
+                <i class="fas fa-chevron-right text-slate-300 hidden lg:block"></i>
+                <div class="w-full lg:flex-1 p-6 bg-white rounded-2xl border border-slate-200 shadow-sm flex items-center">
+                    <img src="assets/見積.png" alt="見積発行" class="w-12 h-12 object-cover rounded-md mr-4 cursor-pointer transition-transform hover:scale-105" loading="lazy" data-large="assets/見積.png">
+                    <p class="font-bold text-sm">見積発行</p>
+                </div>
+                <i class="fas fa-chevron-right text-slate-300 hidden lg:block"></i>
+                <div class="w-full lg:flex-1 p-6 bg-green-50 rounded-2xl border-2 border-green-200 shadow-sm flex items-center">
+                    <img src="assets/予測.png" alt="売上予測" class="w-12 h-12 object-cover rounded-md mr-4 cursor-pointer transition-transform hover:scale-105" loading="lazy" data-large="assets/予測.png">
+                    <div>
+                        <span class="text-[10px] font-black text-green-600 block mb-1 uppercase">Goal</span>
+                        <p class="font-bold text-sm text-green-700">売上予測</p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-xs text-slate-400 mt-12 italic text-center mx-auto max-w-2xl leading-loose">
+                ※活動、カレンダー、メール、ToDoはすべての工程で自動連動します。
+            </p>
+        </div>
+    </section>
+
+    <section id="features" class="py-24 bg-slate-900 text-white overflow-hidden">
+        <div class="container mx-auto px-6 mb-16 text-center lg:text-left">
+            <h2 class="text-3xl lg:text-4xl font-black mb-4">洗練されたUI、究極の顧客価値</h2>
+            <p class="text-slate-400 italic">Salesforce級の機能を、直感的な操作感で。</p>
+        </div>
+        
+        <div class="flex overflow-x-auto snap-x snap-mandatory gap-8 px-6 pb-12 no-scrollbar">
+            <div class="flex-none w-[85%] md:w-[600px] snap-center">
+                <div class="bg-white/5 rounded-[3rem] p-10 border border-white/10 h-full backdrop-blur-md interactive-card relative">
+                    <div class="flex items-center gap-6 mb-10">
+                        <div class="w-16 h-16 bg-indigo-600/20 rounded-2xl flex items-center justify-center text-indigo-400"><i class="fas fa-brain text-3xl"></i></div>
+                        <h3 class="text-2xl font-bold text-slate-100">隠れAI：習慣を変えない進化</h3>
+                    </div>
+                    <div class="aspect-video rounded-2xl mb-8 overflow-hidden">
+                        <img src="assets/customerlist withAI.png" alt="売上予測・AI分析イメージ" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Microsoft TeamsやGoogle環境に溶け込み、AIが売上予測や見積作成を「隠れた助手」として支援。特別な操作なしで現場の生産性を底上げします。
+                    </p>
+                </div>
+            </div>
+
+            <div id="extension" class="flex-none w-[85%] md:w-[600px] snap-center">
+                <div class="bg-white/5 rounded-[3rem] p-10 border border-white/10 h-full backdrop-blur-md interactive-card relative">
+                    <div class="flex items-center gap-6 mb-10">
+                        <div class="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center text-blue-400"><i class="fas fa-plug text-3xl"></i></div>
+                        <h3 class="text-2xl font-bold text-slate-100">将来を支える拡張性とAPI</h3>
+                    </div>
+                    <div class="aspect-video rounded-2xl mb-8 overflow-hidden">
+                        <img src="assets/API interface.png" alt="API interface" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        柔軟なAPIにより、既存の会計ソフトや基幹システムとシームレスに連携。営業から始まった改善を、将来的に会社全体のデータ統合へと広げられます。
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex-none w-[85%] md:w-[600px] snap-center rounded-[3rem]">
+                <div class="bg-white/5 rounded-[3rem] p-10 border border-white/10 h-full backdrop-blur-md interactive-card relative">
+                    <div class="flex items-center gap-6 mb-10">
+                        <div class="w-16 h-16 bg-orange-600/20 rounded-2xl flex items-center justify-center text-orange-400"><i class="fas fa-user-check text-3xl"></i></div>
+                        <h3 class="text-2xl font-bold text-slate-100">IT担当者不在でも安心の運用</h3>
+                    </div>
+                    <div class="aspect-video rounded-2xl mb-8 overflow-hidden">
+                        <img src="assets/CRM-1.png" alt="管理画面イメージ (CRM-1)" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        サーバー管理や専門的なメンテナンスは不要。誰でも直感的に操作できる管理画面により、専任のIT部門がなくても低コストで安定した運用が可能です。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="subsidy" class="py-24 bg-blue-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl lg:text-5xl font-black mb-8 leading-tight">日本の IT 導入補助金で、<br>最高クラスの CRM を身近に。</h2>
+            <p class="text-lg text-blue-100 mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
+                2026年度も 補助金活用をフルサポート。低投資で最大の成果を出すための、自由なカスタマイズと迅速な対応をお約束します。
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="Demo Requst.html" class="bg-white text-blue-600 px-12 py-5 rounded-2xl font-black text-xl hover:bg-slate-100 transition shadow-2xl inline-block text-center">無料デモを予約する</a>
+                <a href="補助金相談.html" class="bg-blue-800 text-white border border-blue-400 px-12 py-5 rounded-2xl font-black text-xl hover:bg-blue-900 transition inline-block text-center">補助金を相談する</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-white border-t border-slate-200">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center items-center space-x-2 mb-6 grayscale opacity-60">
+                <div class="w-8 h-8 bg-[#8cc63f] rounded flex items-center justify-center shadow-sm">
+                    <span class="text-white font-bold text-sm">T</span>
+                </div>
+                <span class="text-xl font-bold text-slate-800 tracking-tighter uppercase">TeraboX CRM</span>
+            </div>
+            <p class="text-[11px] text-slate-500 font-bold uppercase tracking-widest leading-loose">
+                テラボックス株式会社 / Terabox, Inc. <br class="sm:hidden"> © 2026 All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Image lightbox modal -->
+    <div id="img-lightbox" class="fixed inset-0 hidden items-center justify-center bg-black/60 z-50" aria-hidden="true">
+        <button id="img-lightbox-close" class="absolute top-6 right-6 text-white text-2xl bg-black/40 rounded-full w-10 h-10 flex items-center justify-center">&times;</button>
+        <div class="max-w-3xl max-h-[80vh] p-4">
+            <img id="img-lightbox-img" src="" alt="拡大画像" class="w-full h-auto rounded-lg shadow-2xl">
+        </div>
+    </div>
+
+    <script>
+        // Simple image lightbox for workflow thumbnails
+        (function(){
+            const lightbox = document.getElementById('img-lightbox');
+            const lightboxImg = document.getElementById('img-lightbox-img');
+            const closeBtn = document.getElementById('img-lightbox-close');
+
+            function openLightbox(src, alt){
+                lightboxImg.src = src;
+                lightboxImg.alt = alt || '拡大画像';
+                // show and center (use flex for centering)
+                lightbox.classList.remove('hidden');
+                lightbox.classList.add('flex');
+                lightbox.setAttribute('aria-hidden','false');
+                // prevent background scroll
+                document.documentElement.style.overflow = 'hidden';
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox(){
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+                lightbox.setAttribute('aria-hidden','true');
+                lightboxImg.src = '';
+                // restore scrolling
+                document.documentElement.style.overflow = '';
+                document.body.style.overflow = '';
+            }
+
+            // Attach click handlers to thumbnails
+            document.querySelectorAll('.w-12.cursor-pointer').forEach(img => {
+                img.addEventListener('click', (e) => {
+                    const src = img.getAttribute('data-large') || img.src;
+                    openLightbox(src, img.alt);
+                });
+            });
+
+            // Close handlers
+            closeBtn.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', function(e){
+                if(e.target === lightbox) closeLightbox();
+            });
+            document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeLightbox(); });
+        })();
+    </script>
+
+    <script>
+        // interactive card parallax / tilt effect with dynamic border highlight & selection
+        (function(){
+            const cards = document.querySelectorAll('.interactive-card');
+            let selectedCard = null;
+
+            cards.forEach(card => {
+                const parent = card.parentElement;
+                if(parent) parent.style.perspective = '900px';
+                card.style.transition = 'box-shadow .25s ease, transform .25s ease, border-color .2s ease';
+
+                function applyVisual(px, py, intensity){
+                    const rotateY = (px - 0.5) * 12;
+                    const rotateX = (0.5 - py) * 8;
+                    const translateY = (0.5 - py) * 6;
+                    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(${translateY}px)`;
+
+                    const shadowX = (px - 0.5) * -18;
+                    const shadowY = (py - 0.5) * -18;
+                    const blur = 30;
+                    const baseAlpha = 0.12 + 0.06 * intensity;
+                    const glowBlur = 22 + 18 * intensity;
+                    const glowAlpha = 0.18 + 0.32 * intensity;
+                    const glow = `0 0 ${glowBlur}px rgba(59,130,246,${Math.min(glowAlpha,0.85)})`;
+                    const drop = `${shadowX}px ${shadowY}px ${blur}px rgba(2,6,23,${baseAlpha})`;
+                    card.style.boxShadow = `${drop}, ${glow}`;
+                    card.style.borderColor = `rgba(59,130,246,${0.35 + 0.45 * intensity})`;
+                }
+
+                function clearVisual(){
+                    card.style.transform = '';
+                    card.style.boxShadow = '';
+                    // if not selected, reset border color
+                    if(card.dataset.selected !== 'true') card.style.borderColor = '';
+                }
+
+                function setSelected(on){
+                    if(on){
+                        card.dataset.selected = 'true';
+                        selectedCard = card;
+                        card.style.boxShadow = `0 8px 36px rgba(2,6,23,0.14), 0 0 34px rgba(59,130,246,0.42)`;
+                        card.style.borderColor = 'rgba(59,130,246,0.7)';
+                    } else {
+                        card.dataset.selected = 'false';
+                        if(selectedCard === card) selectedCard = null;
+                        card.style.boxShadow = '';
+                        card.style.borderColor = '';
+                    }
+                }
+
+                function onMove(e){
+                    const rect = card.getBoundingClientRect();
+                    const px = (e.clientX - rect.left) / rect.width;
+                    const py = (e.clientY - rect.top) / rect.height;
+                    applyVisual(px, py, 1);
+                }
+
+                function onLeave(){
+                    if(card.dataset.selected === 'true'){
+                        // keep subtle persistent highlight
+                        card.style.boxShadow = `0 6px 30px rgba(2,6,23,0.12), 0 0 28px rgba(59,130,246,0.36)`;
+                        card.style.borderColor = 'rgba(59,130,246,0.6)';
+                        card.style.transform = '';
+                    } else {
+                        clearVisual();
+                    }
+                }
+
+                card.addEventListener('mousemove', onMove);
+                card.addEventListener('touchmove', function(ev){ if(ev.touches && ev.touches[0]) onMove(ev.touches[0]); }, {passive:true});
+                card.addEventListener('mouseleave', onLeave);
+                card.addEventListener('touchend', onLeave);
+
+                card.addEventListener('click', function(e){
+                    // toggle selection; ensure only one selected at time
+                    if(selectedCard && selectedCard !== card){
+                        selectedCard.dataset.selected = 'false';
+                        selectedCard.style.borderColor = '';
+                        selectedCard.style.boxShadow = '';
+                    }
+                    const isSelected = card.dataset.selected === 'true';
+                    setSelected(!isSelected);
+                });
+            });
+        })();
+    </script>
+
+    <script>
+        // Informational modal for social-login demo buttons (no OAuth)
+        (function(){
+            const modal = document.getElementById('login-info-modal');
+            const msg = document.getElementById('login-info-msg');
+            const closeBtn = document.getElementById('login-info-close');
+            const okBtn = document.getElementById('login-info-ok');
+
+            function openLoginModal(provider){
+                const pname = provider === 'google' ? 'Google' : provider === 'microsoft' ? 'Microsoft' : provider;
+                msg.textContent = pname + ' アカウントで簡単に始められます（操作イメージ）。このボタンはデモ表示で、ここから直接ログインは行われません。実際のOAuth連携は別途設定が必要です。';
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.documentElement.style.overflow = 'hidden';
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLoginModal(){
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.documentElement.style.overflow = '';
+                document.body.style.overflow = '';
+            }
+
+            document.querySelectorAll('button[data-provider]').forEach(btn => {
+                btn.addEventListener('click', function(e){
+                    e.preventDefault();
+                    const provider = btn.getAttribute('data-provider');
+                    openLoginModal(provider);
+                });
+            });
+
+            closeBtn.addEventListener('click', closeLoginModal);
+            okBtn.addEventListener('click', closeLoginModal);
+            modal.addEventListener('click', function(e){ if(e.target === modal) closeLoginModal(); });
+            document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeLoginModal(); });
+        })();
+    </script>
+
+</body>
+</html>
