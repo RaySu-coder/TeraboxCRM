@@ -86,10 +86,10 @@
                     <div id="login-encourage-modal" class="fixed inset-0 hidden items-center justify-center bg-black/60 z-60" aria-hidden="true">
                         <div class="bg-white rounded-lg max-w-lg w-[92%] p-6 shadow-2xl relative">
                             <button id="login-encourage-close" class="absolute top-3 right-3 text-slate-600 hover:text-slate-900">&times;</button>
-                            <h3 class="text-lg font-bold mb-2">开始使用您的账号</h3>
-                            <p id="login-encourage-msg" class="text-sm text-slate-600 leading-relaxed">使用您的 Microsoft 或 Google 账号快速登录，开始体验 TeraboX CRM 的强大功能。您的现有账号将无缝集成，让您立即开始管理工作。</p>
+                            <h3 class="text-lg font-bold mb-2">アカウントをご利用ください</h3>
+                            <p id="login-encourage-msg" class="text-sm text-slate-600 leading-relaxed">ご利用の Microsoft または Google アカウントで迅速にログインし、TeraboX CRM の強力な機能を体験してください。既存のアカウントがシームレスに統合され、すぐに業務を開始できます。</p>
                             <div class="mt-6 text-right">
-                                <button id="login-encourage-ok" class="px-4 py-2 bg-blue-600 text-white rounded-lg font-medium">知道了</button>
+                                <button id="login-encourage-ok" class="px-4 py-2 bg-blue-600 text-white rounded-lg font-medium">了解しました</button>
                             </div>
                         </div>
                     </div>
@@ -402,7 +402,7 @@
 
             function openLoginEncourageModal(provider){
                 const pname = provider === 'google' ? 'Google' : provider === 'microsoft' ? 'Microsoft' : provider;
-                msg.textContent = '使用您的 ' + pname + ' 账号快速登录，开始体验 TeraboX CRM 的强大功能。您的现有账号将无缝集成，让您立即开始管理工作。';
+                msg.textContent = 'ご利用の ' + pname + ' アカウントで迅速にログインし、TeraboX CRM の強力な機能を体験してください。既存のアカウントがシームレスに統合され、すぐに業務を開始できます。';
                 modal.classList.remove('hidden');
                 modal.classList.add('flex');
                 document.documentElement.style.overflow = 'hidden';
