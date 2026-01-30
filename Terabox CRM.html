@@ -82,17 +82,6 @@
                         </div>
                     </div>
 
-                    <!-- Login info modal (informational only, no OAuth) -->
-                    <div id="login-info-modal" class="fixed inset-0 hidden items-center justify-center bg-black/60 z-60" aria-hidden="true">
-                        <div class="bg-white rounded-lg max-w-lg w-[92%] p-6 shadow-2xl relative">
-                            <button id="login-info-close" class="absolute top-3 right-3 text-slate-600 hover:text-slate-900">&times;</button>
-                            <h3 class="text-lg font-bold mb-2">アカウントでの開始（操作イメージ）</h3>
-                            <p id="login-info-msg" class="text-sm text-slate-600 leading-relaxed">指定したアカウントで簡単に始められます。ここはデモ表示のため実際のログインは行われません。</p>
-                            <div class="mt-6 text-right">
-                                <button id="login-info-ok" class="px-4 py-2 bg-blue-600 text-white rounded-lg font-medium">閉じる</button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -388,45 +377,6 @@
                     setSelected(!isSelected);
                 });
             });
-        })();
-    </script>
-
-    <script>
-        // Informational modal for social-login demo buttons (no OAuth)
-        (function(){
-            const modal = document.getElementById('login-info-modal');
-            const msg = document.getElementById('login-info-msg');
-            const closeBtn = document.getElementById('login-info-close');
-            const okBtn = document.getElementById('login-info-ok');
-
-            function openLoginModal(provider){
-                const pname = provider === 'google' ? 'Google' : provider === 'microsoft' ? 'Microsoft' : provider;
-                msg.textContent = pname + ' アカウントで簡単に始められます（操作イメージ）。このボタンはデモ表示で、ここから直接ログインは行われません。実際のOAuth連携は別途設定が必要です。';
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-                document.documentElement.style.overflow = 'hidden';
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closeLoginModal(){
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-                document.documentElement.style.overflow = '';
-                document.body.style.overflow = '';
-            }
-
-            document.querySelectorAll('button[data-provider]').forEach(btn => {
-                btn.addEventListener('click', function(e){
-                    e.preventDefault();
-                    const provider = btn.getAttribute('data-provider');
-                    openLoginModal(provider);
-                });
-            });
-
-            closeBtn.addEventListener('click', closeLoginModal);
-            okBtn.addEventListener('click', closeLoginModal);
-            modal.addEventListener('click', function(e){ if(e.target === modal) closeLoginModal(); });
-            document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeLoginModal(); });
         })();
     </script>
 
