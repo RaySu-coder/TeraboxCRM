@@ -82,6 +82,18 @@
                         </div>
                     </div>
 
+                    <!-- Login encouragement modal -->
+                    <div id="login-encourage-modal" class="fixed inset-0 hidden items-center justify-center bg-black/60 z-60" aria-hidden="true">
+                        <div class="bg-white rounded-lg max-w-lg w-[92%] p-6 shadow-2xl relative">
+                            <button id="login-encourage-close" class="absolute top-3 right-3 text-slate-600 hover:text-slate-900">&times;</button>
+                            <h3 class="text-lg font-bold mb-2">开始使用您的账号</h3>
+                            <p id="login-encourage-msg" class="text-sm text-slate-600 leading-relaxed">使用您的 Microsoft 或 Google 账号快速登录，开始体验 TeraboX CRM 的强大功能。您的现有账号将无缝集成，让您立即开始管理工作。</p>
+                            <div class="mt-6 text-right">
+                                <button id="login-encourage-ok" class="px-4 py-2 bg-blue-600 text-white rounded-lg font-medium">知道了</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -377,6 +389,45 @@
                     setSelected(!isSelected);
                 });
             });
+        })();
+    </script>
+
+    <script>
+        // Encouragement modal for social-login buttons
+        (function(){
+            const modal = document.getElementById('login-encourage-modal');
+            const msg = document.getElementById('login-encourage-msg');
+            const closeBtn = document.getElementById('login-encourage-close');
+            const okBtn = document.getElementById('login-encourage-ok');
+
+            function openLoginEncourageModal(provider){
+                const pname = provider === 'google' ? 'Google' : provider === 'microsoft' ? 'Microsoft' : provider;
+                msg.textContent = '使用您的 ' + pname + ' 账号快速登录，开始体验 TeraboX CRM 的强大功能。您的现有账号将无缝集成，让您立即开始管理工作。';
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.documentElement.style.overflow = 'hidden';
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLoginEncourageModal(){
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.documentElement.style.overflow = '';
+                document.body.style.overflow = '';
+            }
+
+            document.querySelectorAll('button[data-provider]').forEach(btn => {
+                btn.addEventListener('click', function(e){
+                    e.preventDefault();
+                    const provider = btn.getAttribute('data-provider');
+                    openLoginEncourageModal(provider);
+                });
+            });
+
+            closeBtn.addEventListener('click', closeLoginEncourageModal);
+            okBtn.addEventListener('click', closeLoginEncourageModal);
+            modal.addEventListener('click', function(e){ if(e.target === modal) closeLoginEncourageModal(); });
+            document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeLoginEncourageModal(); });
         })();
     </script>
 
